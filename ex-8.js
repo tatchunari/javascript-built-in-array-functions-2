@@ -373,6 +373,12 @@ const bills = [
     },
 ];
 
-// Start coding here
+function getTotalByLocation(bills) {
+  return bills.reduce((acc, bill) => {
+    acc[bill.location] = (acc[bill.location] || 0) + bill.total;
+    return acc;
+  }, {});
+}
 
-const totalPaidByLocation;
+const result = getTotalByLocation(bills);
+console.log(result);
