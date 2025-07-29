@@ -374,4 +374,8 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+function totalValidMember(bills) {
+  return bills.filter((bill)=>bill.member).map((bill)=>bill.member.name)
+}
+const billMembers = totalValidMember(bills);
+console.log(billMembers);

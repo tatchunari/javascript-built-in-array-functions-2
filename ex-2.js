@@ -374,5 +374,9 @@ const bills = [
 ];
 
 // Start coding here
+function filteredValidMember(bills) {
+  return bills.filter((bill)=>bill.member)
+}
 
-const newBills;
+const newBills = filteredValidMember(bills);
+console.log(newBills);
